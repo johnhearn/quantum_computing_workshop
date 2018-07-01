@@ -48,6 +48,15 @@ Exercises: recursive tensor product, Grover's Search
 - Quantum computing SDKs and real quantum computers
 - Implications for the future
 
+# Online Resources
+
+Michael Nielson's YouTube course - [Quantum Computing for the Determined](https://www.youtube.com/playlist?list=PL1826E60FD05B44E4)
+
+Microsoft's Q# - [What is Quantum Computing?](https://docs.microsoft.com/en-us/quantum/quantum-concepts-1-intro?view=qsharp-preview)
+
+Craig Gidney's [Quirk](http://algassert.com/quirk) online quantum circuit simulator and [blog](http://algassert.com/).
+
+# License
 
 [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
