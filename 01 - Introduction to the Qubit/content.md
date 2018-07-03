@@ -2,9 +2,9 @@
 
 It shouldn't be necessary to explain to programmers what a *bit* of information is. It's a concept so fundamental to computing that, if anything, it's taken almost for granted in modern day programming.
 
-We often forget that in the earliest computers each bits of information was represented using a clunky, power-hungry vacuum tube. Computing in those days was inefficient and error-prone. Vacuuum tubes were replaced by individual transistors which were miniturised over time and then packed into integrated circuits which are the processors of today's laptops and smartphones.
+We often forget that in the earliest computers each bit of information was represented using a clunky, power-hungry vacuum tube. Computing in those days was inefficient and error-prone. Vacuuum tubes were replaced by individual transistors which were miniaturised over time and then packed into integrated circuits which are the processors of today's laptops and smartphones.
 
-To understand the world of quantum computing we'll need to return again to the level of individual bits. Do not be fooled, however, into thinking that this is a step backwards, in fact we'll see that the strange world of quantum mechanics brings immense benefits and can even produce results that traditional, or *classical*, bits cannot.
+To understand the world of quantum computing we'll need to return again to the level of individual bits. Do not be fooled, however, into thinking that this is a step backwards, in fact we'll see that the strange world of quantum mechanics brings immense benefits and can even produce results that traditional or *classical* bits cannot.
 
 When we consider single bits, we are used to seeing them represented in different ways: 1/0, true/false or maybe even on/off. The possible values are called *states*, that is, an "on" state or an "off" state, etc. This representation can be pictured geometrically, namely as an arrow pointing up from some origin to represent the `true` state or an arrow pointing down from the same origin to represent the `false` state.
  
