@@ -16,7 +16,7 @@ With this in mind we reinterpret the familiar NOT operator or *gate* as simply f
 
 Now let's imagine that the arrow is not confined to just the Up (`true`) and down (`false`) states, as it is for a classical bit, but can point in *any* direction. You’ve just imagined the all the possible states of a quantum bit or *qubit*.
 
-![Bloch sphere](bloch.png]
+![Bloch sphere](bloch-sphere.png)
 
 This visual representation of a quantum bit is called the Bloch sphere and it’s evidently not restricted to just two mutually exclusive states, as in the case of the classical bit, but rather a continuum of states over the whole surface of a unit sphere.
 
@@ -30,6 +30,8 @@ For example, if the arrow of our quantum bit is pointing up vertically it will b
 
 Believe it or not this view of a quantum bit has been fully validated by experiment. Specially prepared light particles, atoms and other mechanisms can be described in exactly this way. It leads to some very surprising and powerful results in it’s own right but the real power doesn't come until when we combine multiple bits into a single state, as we shall see in the next section.
 
+Exercise 1: representing the qubit
+Exercise 2: a quantum random number generator
 
 ### Footnotes
 
