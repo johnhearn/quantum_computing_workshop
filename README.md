@@ -4,13 +4,19 @@
 #
 # Quantum Computing Workshop for Programmers
 
-The world of quantum computing can be difficult to absorb at first, partly due to the unintuitive nature of quantum mechanics and the heavy mathematical language that is required to express it. In this workshop I’ve tried to express the power and beauty of quantum computing in a way that any software engineer can understand. 
+The world of quantum computing can be difficult to absorb at first, partly due to the unintuitive nature of quantum mechanics and partly due to the heavy mathematical language used to express it. 
 
-Using practical exercises it takes the student through from an intuitive understanding of the qubit through to quantum algorithms.
+In this workshop I’ve tried to convey the power and beauty of quantum computing in a way that programmers can understand. It introduces just enough maths and physics to get to grips with the subject without simplifiying to the point of absurdity.
 
-Each section of the course is organised into an explanation of basic concepts with the minumum maths followed by one or more programming exercises which introduce the mathematics and reenforce understanding with practical use. Each exercise builds on the last culminating in a basic working quantum computing simulator.
+Using practical exercises it moves from an intuitive understanding of the concepts through to the fundamental quantum algorithms.
 
-This is the course that I wanted to do. I hope it’s of some use to someone.
+Each section is organised into an explanation with the minimum maths followed by one or more programming exercises which introduce the mathematics and reenforce it with practical use. Each exercise builds on the last culminating in a basic working quantum computer simulator.
+
+A reasonably high level of programming skills is assumed. If you want to learn programming then this is not the place. Also, a familiarity with linear algebra will also be useful but not necessary.
+
+Exercises will be guided using tests, that is, I provide feature or unit tests and the challenge is to write the code to pass the tests. Hints will be given in Java so the ability to at least read Java will be useful.
+
+This is the course that I wanted to do. I hope it’s of some use to someone else.
 
 
 ## Introduction to the Qubit
