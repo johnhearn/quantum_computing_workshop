@@ -40,7 +40,7 @@ Hint: here is an example of what that test might look like in Java:
                 .count()).isBetween(45L, 55L); // ~50% False ~50% True
     }
 ```
-It uses Java's build in `Stream` class to generate 100 qubits prepared by a quantum source to be in the `False` state, it then rotates them by 90º (a so called [√NOT or NOT<sup>½</sup> gate]https://en.wikipedia.org/wiki/Quantum_logic_gate#Square_root_of_NOT_gate_(%E2%88%9ANOT))) and then ensures that the measured number of random `True` states is around 50%.
+It uses Java's build in `Stream` class to generate 100 qubits prepared by a quantum source to be in the `False` state, it then rotates them by 90º (a so called [√NOT or NOT<sup>½</sup> gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Square_root_of_NOT_gate_(%E2%88%9ANOT))) and then ensures that the measured number of random `True` states is around 50%.
 
 This is just an example of a test for the random bit generator. There are a million other ways to write this test, in any number of languages. Choose the one that you are most comfortable with.
 
@@ -61,7 +61,7 @@ Hint:
 	@Test
 	void create_100_true_qubits() {
 		assertTrue(Stream.generate(() -> new Qubit())
-            .map(Qubit::not)
+			.map(Qubit::not)
 			.limit(100)
 			.allMatch(Qubit::measure));
 	}

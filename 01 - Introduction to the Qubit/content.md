@@ -34,9 +34,7 @@ For example, if the arrow of our quantum bit is pointing up vertically it will b
 
 Believe it or not this view of a quantum bit has been fully validated by experiment. Specially prepared light particles, atoms and other mechanisms behave in exactly this way. It leads to some very surprising results in its own right but the real power doesn't come until we combine multiple bits into a single state, as we shall see in the next section.
 
-[Exercise 1](ex01%20-%20representing%20the%20qubit.md): representing the qubit
-
-[Exercise 2](ex02%20-%20a%20quantum%20random%20number%20generator.md): a quantum random number generator
+Next: [Representing the qubit](ex01%20-%20representing%20the%20qubit.md)
 
 ### Footnotes
 
