@@ -12,7 +12,7 @@ For now we will choose the terms `True` and `False` which are familiar to us as 
 
 Bits can also be be pictured geometrically, for example as an arrow pointing up from some origin to represent the `False` state or an arrow pointing down from the same origin to represent the `True` state.
  
-![True](true.png)  ![False](false.png)
+![True](images/true.png)  ![False](images/false.png)
 
 With this in mind we reinterpret the familiar NOT operator or *gate* as simply flipping the arrow through 180º, from up (`False`) to down (`True`) and vice versa. In this space we’ve just invented, the NOT gate is an example of a *unitary operation* on the bit, that is to say, it changes the direction of the arrow but not its length. In fact in the classical world there are only two one-bit operations, the other being the *identity* operator which leaves the bit in its previous state and is obviously also unitary.
 
@@ -22,7 +22,7 @@ Now take a moment to imagine that the arrow is not confined to just the up (`Fal
 
 This visual representation of a quantum bit is evidently not restricted to just two mutually exclusive states, as in the case of the classical bit, but rather a continuum of states over the whole surface of a sphere, so-called **Bloch sphere**.
 
-![Bloch sphere](bloch-sphere.png)
+![Bloch sphere](images/bloch-sphere.png)
 
 Additionally, we can image a whole new family of gates which not only flip the arrow around (like the classical NOT gate) but can rotate it by different angles into any direction<sup>[1]</sup>.
 

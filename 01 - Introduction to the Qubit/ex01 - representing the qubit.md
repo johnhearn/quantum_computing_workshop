@@ -3,7 +3,7 @@ As we saw in the previous section, a qubit generalises a classical bit by repres
 
 Therefore we can represent a qubit in code by a direction in 3D space. One way of doing this is to define two angles, for example the co-latitude θ and longitude φ, as in the diagram below.
 
-![angles](bloch-sphere-with-angles.png)
+![angles](images/bloch-sphere-with-angles.png)
 
 Intuitively, the closeness of the arrow to `False` (straight up) should be some function of the angle between them, θ. In fact, the state is definitely `False` when θ=0 and is definitely **not** `False` when θ=π (180º). Similarly the arrow is definitely `True` when θ=π (180º) and is definitely **not** `True` when θ=0. 
 
