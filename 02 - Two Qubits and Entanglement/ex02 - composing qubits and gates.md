@@ -45,3 +45,51 @@ This gate is not separable into operations on individual qubits and generates en
 One last thing needs to be covered before starting the exercise, that is how to measure a qubits within a register.
 
 Say we have a register with weights *[10% 20% 30% 40%]* for each of the components of the state (`False`-`False` plus `False`-`True` plus `True`-`False` plus `True`-`True`) what is the chance of measuring a `True` on the first qubit? It's just the sum of the third and fouth components, i.e. *30% + 40% = 70%*.
+
+## Quantum Superdense Encoding
+One application of 2 entangled qubits is in an encoding scheme where one previously entangled qubit can transmit 2 classical bits of information with a single qubit in a fundamentally secure way.
+
+There are 3 steps to the process:
+1. Someone, lets call them Eve, prepares 2-qubit pairs in an entangled state. The first qubit from each pair is sent to a transmitter, say Alice, and the second qubit from each pair is sent to a receiver, say Bob. This may be done in advance and the transmitter and receiver may be separated by any distance.
+2. Alice applies a gate to her qubit. The gate is selected based on the 2 bits of classical information she wants to transmit. For example, for the bits 01 she applies the NOT gate, and for 8 bits of classical information required to encode the characher, say `H`, only 4 qubits are needed.
+3. Bob receives the qubit from Alice combines it with the qubit that he was given earlier and measures them to recover the classical information.
+
+It's fundamentally secure because if someone tries to measure the Alice's qubit in transit then the entanglement AND the information will be lost forever.
+
+Notice that is seems as it half the information is retained in Bob's qubit even though Alice never has any contact with it whatsoever.
+
+Let's simulate this interaction stating with a feature test.
+
+
+#### Step 1. Write a feature test which covers the 3 step process defined above.
+
+As a hint, this is an example feature test Java:
+```java
+    @Test
+    void transmit_ascii_character_h() {
+        QubitSource eve = new QubitSource(new Random(1));
+
+        // Eve prepares 4 2-qubit pairs in Bell state
+        Stream<Qupair> qupairs = Stream.generate(eve::prepareBellState).limit(4L);
+
+        // Alice, given just the first qubit in each pair, encodes ASCII character 'H' => 01 00 10 00 => X I Z I
+        SuperdenseEncoder alice = new SuperdenseEncoder(qupairs.map(Qupair::first));
+        alice.encode('H');
+
+        // Bob, given the recombined pairs, recovers the information sent by Alice
+        SuperdenseDecoder bob = new SuperdenseDecoder();
+        assertThat(bob.decode(qupairs)).isEqualTo('H');
+    }
+
+```
+
+Once again we have a `QubitSource` class but this time it prepares `Qubits` in pairs, `Qupairs`, in an entangled state called a Bell state.
+
+We have a `SuperdenseEncoder`, namely Alice which, given the first qubit of the pair applies some gate it it based on the information she wants to send.
+
+Thirdly we have a `SuperdenseDecoder`, Bob, who given Alice's encoded qubit and the second entangled qubit can recover the information.
+
+Once again we use Java 8's `Stream` class. You may prefer to use a normal `List` or some other language.
+
+#### Step 2. Generate the missing code so that the test compiles but don't implement anything yet.
+
