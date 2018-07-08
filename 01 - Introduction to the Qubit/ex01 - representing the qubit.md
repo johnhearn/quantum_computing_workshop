@@ -83,9 +83,4 @@ The feature test should now also pass and we have simulated our first quantum sy
 # Footnotes
 
 1. Another way to look at it is to turn the sphere upside down. Following the same argument we can see that by symmetry the weight of the `True` component should be *cos(π/2 - θ/2)*. This is equal to *sin(θ/2)*. 
-2. This is one of the enigmas quantum mechanics. In fact, it is thought that the underlying "local" state of the qubit is hidden from view in a fundamental way. See Bell's Theorem.
-
-# Glossary
-
-1. *Unit* vector is often used in mathematics to mean "an arrow of length exactly 1.0". 
-2. An a *unitary* operation means any operation on a unit vector which results in another unit vector. A rotation is one example.
+2. [Indeterminacy](https://en.wikipedia.org/wiki/Quantum_indeterminacy) is one of the enigmas of quantum mechanics. In fact, it is thought that the underlying "local" state of the qubit is hidden from view in a fundamental way. See also [Bell's Theorem](https://en.wikipedia.org/wiki/Bell%27s_theorem).
