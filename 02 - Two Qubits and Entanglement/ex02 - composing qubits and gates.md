@@ -1,27 +1,31 @@
 ## Composing Two Qubits
-Until now we have used a simplified representation of a **qubit** using only the angle \theta to represent the state and *sin(θ/2)* and *cos(θ/2)* are the weights of the `False` and `True` components respectively. To extend this representation to more qubits it is useful to write the weights of the components of the state as a vector, namely [*sinth* *costh*]. 
+Until now we have used a simplified representation of a **qubit** using only the angle θ to represent the state with weights *sin(θ/2)* and *cos(θ/2)* for the `False` and `True` components respectively. To generalise these ideas it is useful to write the weights of the components of the state as a vector, namely [*cos(θ/2)* *sin(θ/2)*]. 
 
 For example, a qubit in state `False` can be represented as [1 0] and likewise a qubit in state `True` would be [0 1]. 
 
-When we applied the NOT gate to these states it mapped between them so 
+When we apply the NOT gate to these states it maps between them so 
 
 NOT [1 0] -> [0 1] and NOT [0 1] -> [1 0]
 
-There is a matrix which when multiplied by the state vector has this exact effect: ![NOT](images/not-matrix.png) and in fact it turns out that there is a matrix for *all* the different gates we can imagine. 
+There is a matrix which, when multiplied by the state vector, has this exact effect: 
+
+![NOT](images/not-matrix.png)
+
+In fact that there is a matrix, indeed a *unitary* matrix, for *any* mapping between states that we might imagine.
 
 For example a very useful gate for quantum algorithms is the [Hadamard gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate). It is defined as:
 
 ![Hadamard gate](images/hadamard-gate.svg)
 
-This gate is applied by simply multiplying his matrix by the state vector to create a new state vector. The factor of of the square root of 2 is required to ensure that the matrix it *unitary*, that is only the direction of the state vector is affected.
+This gate is applied by simply multiplying its matrix by the state vector to create a new state vector. (The factor of √2 is required to ensure that the matrix is *unitary*, that is only the direction of the state vector is affected.)
 
-We now have a nice way to represent our qubits and gates so how do we combine qubits? A quantum register is a [special kind of product](https://en.wikipedia.org/wiki/Kronecker_product) of individual qubits state vectors defined like this: 
+We now have a convenient way to represent our qubits and gates so how do we combine two qubits? The state of a quantum register is a [special kind of product](https://en.wikipedia.org/wiki/Kronecker_product) of the states of the individual qubits and is defined like this: 
 
 ![Tensor product](images/tensor-product.png)
 
 The physical mechanism behind this product is again up for philosophical debate. You may simply take it for granted as an empirical fact or axiom, you may prefer to use category theory to show its fundamental properties. Here we will just take it as a given. 
 
-There are two main things to notice with this product. First there are four components (2<sup>2</sup>) in the resulting vector, as we should expect, each corresponding to a weight for each possible combination. These define the actual state of the 2-bit register.
+There are two main things to notice with this product. First there are four components (2<sup>2</sup>) in the resulting vector, as we would expect, each corresponding to a weight for each possible combination. These define the actual state of the 2-bit register.
 
 The second thing to notice is it's recursive nature. This observation will let us make quantum registers of any size in a later exercise.
 
@@ -72,15 +76,14 @@ As a hint, this is an example feature test Java:
         // Eve prepares 4 2-qubit pairs in Bell state
         Stream<Qupair> qupairs = Stream.generate(eve::prepareBellState).limit(4L);
 
-        // Alice, given just the first qubit in each pair, encodes ASCII character 'H' => 01 00 10 00 => X I Z I
+        // Alice, given just the first qubit in each pair, encodes ASCII character 'H' => 0x48 => 01 00 10 00 => X I Z I
         SuperdenseEncoder alice = new SuperdenseEncoder(qupairs.map(Qupair::first));
-        alice.encode('H');
+        alice.encode((byte)0x48);
 
         // Bob, given the recombined pairs, recovers the information sent by Alice
         SuperdenseDecoder bob = new SuperdenseDecoder();
-        assertThat(bob.decode(qupairs)).isEqualTo('H');
+        assertThat(bob.decode(qupairs)).isEqualTo(0x48);
     }
-
 ```
 
 Once again we have a `QubitSource` class but this time it prepares `Qubits` in pairs, `Qupairs`, in an entangled state called a Bell state.
