@@ -6,17 +6,17 @@
 
 The world of quantum computing can be difficult to absorb at first, partly due to the unintuitive nature of quantum mechanics and partly due to the heavy mathematical language used to express it. 
 
-In this workshop I’ve tried to convey the power and beauty of quantum computing in a way that programmers can understand. It introduces just enough maths and physics to get to grips with the subject without simplifiying to the point of absurdity.
+In this workshop I’ve tried to convey the power and beauty of quantum computing in a way that programmers can understand. While shying away from complex maths I've also tried to avoid the tendency of many popular articles and introduce just enough maths and physics to get to grips with the subject without simplifiying to the point of absurdity.
 
 Using practical exercises it moves from an intuitive understanding of the concepts through to the fundamental quantum algorithms.
 
 Each section is organised into an explanation with the minimum maths followed by one or more programming exercises which introduce the mathematics and reenforce it with practical use. Each exercise builds on the last culminating in a basic working quantum computer simulator.
 
-A reasonably high level of programming skills is assumed. If you want to learn programming then this is not the place. Also, a familiarity with linear algebra will also be useful but not necessary.
+A reasonably high level of programming skills is assumed. If you want to learn programming then this is not the place. Also, some familiarity with linear algebras (basically matrices and vectors) will also be useful in some sections.
 
 Exercises will be guided using tests, that is, I provide feature or unit tests and the challenge is to write the code to pass the tests. Hints will be given in Java so the ability to at least read Java will be useful.
 
-This is the course that I wanted to do. I hope it’s of some use to someone else.
+This is the course that I wanted to do. Hopefully it’s of some use to someone else.
 
 
 ## Introduction to the Qubit

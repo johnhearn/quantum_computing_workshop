@@ -11,7 +11,7 @@ class QubitSourceShould {
     @Test
     void create_qubits() {
         QubitSource qubitSource = new QubitSource(new Random());
-        assertThat(Stream.generate(qubitSource::prepareFalse)
+        assertThat(Stream.generate(qubitSource::prepareUp)
                 .limit(100L)
                 .filter(Qubit::measure)
                 .count()).isEqualTo(0L);

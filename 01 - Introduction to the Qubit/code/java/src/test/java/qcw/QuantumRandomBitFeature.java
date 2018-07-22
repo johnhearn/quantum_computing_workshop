@@ -12,7 +12,7 @@ class QuantumRandomBitFeature {
     @Test
     void quantum_random_bit_generator() {
         QubitSource qubitSource = new QubitSource(new Random(1));
-        assertThat(Stream.generate(qubitSource::prepareFalse)
+        assertThat(Stream.generate(qubitSource::prepareUp)
                 .limit(100L)
                 .map(Qubit::halfNot)
                 .filter(Qubit::measure)

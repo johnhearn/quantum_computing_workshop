@@ -9,7 +9,7 @@ class QubitSource {
         this.random = random;
     }
 
-    Qubit prepareFalse() {
+    Qubit prepareUp() {
         return new Qubit(random);
     }
 }
